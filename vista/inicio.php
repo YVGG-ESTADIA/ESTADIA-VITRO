@@ -6,7 +6,7 @@ include '../modelo/config.php';
 $stmt = $pdo->query("SELECT * FROM inicio WHERE id = 1");
 $inicio = $stmt->fetch(PDO::FETCH_ASSOC);
 
-// Guardar cambios si se envía el formulario
+
 if (isset($_POST['guardar']) && isset($_SESSION['usuario'])) {
     $sql = "UPDATE inicio SET 
         titulo_principal = ?, 
